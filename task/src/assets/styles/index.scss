@@ -6,6 +6,14 @@ $label: #6C25FF;
 $loginBtn: #6C25FF4B;
 $btnText: #FFFFFF;
 
+@mixin container {
+    background-color: $bg;
+    max-width: 375px;
+    height: 812px;
+    border: 1px solid $border;
+    margin: 0 auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +21,7 @@ $btnText: #FFFFFF;
 }
 
 .landing_container {
-    background-color: $bg;
-    max-width: 375px;
-    height: 812px;
-    border: 1px solid $border;
-    margin: 0 auto;
+    @include container;
     padding: 549px 20px 41px;
 
     .wlcm_heading {
@@ -74,4 +78,59 @@ $btnText: #FFFFFF;
     background-color: transparent;
     text-transform: capitalize;
     font-weight: 600;
+}
+
+.form_container {
+    @include container;
+    padding: 40px 20px 30px;
+    display: grid;
+    align-content: space-between;
+
+    .form_control {
+        .form_heading {
+            max-width: 188px;
+            height: 69px;
+            font-size: 28px;
+            text-align: left;
+            color: $heading;
+            margin-bottom: 31px;
+            line-height: 36px;
+        }
+    }
+}
+
+.input_fields {
+    margin-bottom: 20px;
+}
+
+.inpt_control {
+    max-width: 335px;
+    height: 49px;
+    position: relative;
+    padding-top: 9px;
+
+    label {
+        width: 98px;
+        background-color: $bg;
+        font-size: 13px;
+        color: $label;
+        position: absolute;
+        top: 0;
+        left: 9px;
+        text-align: left;
+        padding-left: 5px;
+        text-transform: capitalize;
+        line-height: 17px;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid $border;
+        border-radius: 6px;
+        text-transform: capitalize;
+        padding: 17px 10px 15px 12px;
+        background-color: transparent;
+        height: 40px;
+        outline-color: $border;
+    }
 }
