@@ -1,0 +1,77 @@
+$border: #CBCBCB;
+$bg: #F7F8F9;
+$paragraph: #919191;
+$heading: #1D2226;
+$label: #6C25FF;
+$loginBtn: #6C25FF4B;
+$btnText: #FFFFFF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landing_container {
+    background-color: $bg;
+    max-width: 375px;
+    height: 812px;
+    border: 1px solid $border;
+    margin: 0 auto;
+    padding: 549px 20px 41px;
+
+    .wlcm_heading {
+        text-align: left;
+        margin-right: 104px;
+        font-size: 28px;
+        height: 33px;
+        line-height: 1;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: $heading;
+    }
+
+    .greet_text {
+        max-width: 232px;
+        height: 48px;
+        font-size: 18px;
+        color: $paragraph;
+        margin-bottom: 29px;
+        text-align: left;
+        overflow: hidden;
+        font-weight: 400;
+    }
+
+    .create_acc_btn {
+        margin-bottom: 10px;
+    }
+}
+
+.btn {
+    background-color: $label;
+    border-radius: 6px;
+    max-width: 335px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+}
+
+.create_acc {
+    background-color: $label;
+    color: $btnText ;
+}
+
+.login {
+    background-color: $loginBtn;
+    color: $heading;
+}
+
+.btn button {
+    height: 19px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-transform: capitalize;
+    font-weight: 600;
+}
