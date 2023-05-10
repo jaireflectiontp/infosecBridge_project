@@ -1,7 +1,9 @@
 import React from 'react';
 import "../../../assets/styles/index.scss";
 import Button from '../../common/button/Button';
+import { Link } from 'react-router-dom';
 const LandingPage = () => {
+
   return (
     <>
       <div className="landing_container">
@@ -13,12 +15,20 @@ const LandingPage = () => {
           voluptatem modi quibusdam.
         </p>
         <div className="create_acc_btn">
-          <Button btnName="create account"
-            className="create_acc" />
+          <Link className='anchor' to='/signup'>
+            <Button btnName="create account"
+              className="create_acc"
+            />
+          </Link>
         </div>
-        <div className="login_btn">
-          <Button btnName="Already Registered? Login"
-            className="login" />
+
+        <div className="login_btn" >
+          <Link className='anchor' to='/signin'>
+            <Button btnName="Already Registered? Login"
+              className="login"
+            />
+          </Link>
+
         </div>
       </div>
     </>

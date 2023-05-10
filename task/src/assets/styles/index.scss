@@ -18,6 +18,15 @@ $btnText: #FFFFFF;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Rubik;
+}
+
+.anchor {
+    text-decoration: none
+}
+
+.d-none {
+    display: none
 }
 
 .landing_container {
@@ -26,12 +35,11 @@ $btnText: #FFFFFF;
 
     .wlcm_heading {
         text-align: left;
-        margin-right: 104px;
         font-size: 28px;
         height: 33px;
         line-height: 1;
         margin-bottom: 10px;
-        font-weight: 600;
+        font-weight: 500;
         color: $heading;
     }
 
@@ -44,6 +52,8 @@ $btnText: #FFFFFF;
         text-align: left;
         overflow: hidden;
         font-weight: 400;
+        line-height: 26px;
+        opacity: 60%;
     }
 
     .create_acc_btn {
@@ -58,6 +68,7 @@ $btnText: #FFFFFF;
     height: 46px;
     display: grid;
     place-items: center;
+    cursor: pointer;
 }
 
 .create_acc {
@@ -77,7 +88,13 @@ $btnText: #FFFFFF;
     outline: none;
     background-color: transparent;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.disable {
+    background-color: $border;
+    color: $btnText;
 }
 
 .d-block {
@@ -87,6 +104,10 @@ $btnText: #FFFFFF;
 .d-grid {
     display: grid;
     align-content: space-between;
+}
+
+.req_mark {
+    color: #DD4A3D;
 }
 
 .form_container {
@@ -99,9 +120,9 @@ $btnText: #FFFFFF;
             height: 69px;
             font-size: 28px;
             text-align: left;
-            color: $heading;
-            margin-bottom: 31px;
+            color: #1D2226;
             line-height: 36px;
+            font-weight: 500;
         }
 
         .signin_text {
@@ -109,13 +130,47 @@ $btnText: #FFFFFF;
             height: 48px;
             font-size: 18px;
             color: $paragraph;
-            margin-bottom: 29px;
+            margin-top: 14px;
             text-align: left;
             overflow: hidden;
             font-weight: 400;
+            line-height: 26px;
+            opacity: 60%;
+        }
+
+        .agency_check {
+            max-width: 132px;
+            height: 47px;
+            font-size: 13px;
+            display: grid;
+            align-content: space-between;
+
+            .radios {
+                display: flex;
+                justify-content: space-between;
+
+                .checks {
+                    display: flex;
+                    align-items: center;
+
+                    label {
+                        font-size: 14px;
+                        margin-left: 12px;
+                    }
+
+                    input[type=radio] {
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
+            }
         }
 
     }
+}
+
+form {
+    margin-top: 24px;
 }
 
 .input_fields {
@@ -129,15 +184,14 @@ $btnText: #FFFFFF;
     padding-top: 9px;
 
     label {
-        width: 98px;
-        background-color: $bg;
+        background-color: #F7F8F9;
         font-size: 13px;
-        color: $label;
+        color: #6C25FF;
         position: absolute;
         top: 0;
         left: 9px;
         text-align: left;
-        padding-left: 5px;
+        padding: 0 5px;
         text-transform: capitalize;
         line-height: 17px;
     }
@@ -146,10 +200,76 @@ $btnText: #FFFFFF;
         width: 100%;
         border: 1px solid $border;
         border-radius: 6px;
-        text-transform: capitalize;
         padding: 17px 10px 15px 12px;
         background-color: transparent;
         height: 40px;
         outline-color: $border;
     }
+}
+
+.account_container {
+    @include container;
+
+    .page_heading {
+        height: 68px;
+        text-align: left;
+        line-height: 21px;
+        font-size: 18px;
+        color: $heading;
+        padding: 27px 0 19px 15px;
+        font-weight: 400;
+        background-color: $btnText;
+    }
+
+    .account_container_inner {
+        padding: 0 18px 35px 20px;
+        border-bottom: 1px dashed $border;
+
+        .profile_section {
+            margin: 30px 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .user_profile_img {
+                position: relative;
+                max-width: 76px;
+                height: 76px;
+
+                .camIcon {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+
+            .user_details {
+                margin-left: 20px;
+                text-align: left;
+
+                .user_name {
+                    text-transform: capitalize;
+                    font-size: 15px;
+                    color: $heading;
+                    margin-bottom: 6px;
+                    font-weight: 500;
+
+                }
+
+                .user_email {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .user_bio {
+            overflow: hidden;
+            font-size: 14px;
+            color: $heading;
+            text-align: left;
+            height: 63px;
+            line-height: 22px;
+        }
+    }
+
 }
