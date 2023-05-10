@@ -80,11 +80,18 @@ $btnText: #FFFFFF;
     font-weight: 600;
 }
 
+.d-block {
+    display: block
+}
+
+.d-grid {
+    display: grid;
+    align-content: space-between;
+}
+
 .form_container {
     @include container;
     padding: 40px 20px 30px;
-    display: grid;
-    align-content: space-between;
 
     .form_control {
         .form_heading {
@@ -96,6 +103,18 @@ $btnText: #FFFFFF;
             margin-bottom: 31px;
             line-height: 36px;
         }
+
+        .signin_text {
+            max-width: 232px;
+            height: 48px;
+            font-size: 18px;
+            color: $paragraph;
+            margin-bottom: 29px;
+            text-align: left;
+            overflow: hidden;
+            font-weight: 400;
+        }
+
     }
 }
 
