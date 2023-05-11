@@ -2,6 +2,7 @@ import React from 'react';
 import "../../../assets/styles/index.scss";
 import Form from '../../common/form/Form';
 import Button from '../../common/button/Button';
+import { Link } from 'react-router-dom';
 const Signup = () => {
   return (
     <>
@@ -23,11 +24,14 @@ const Signup = () => {
             </div>
           </>
         </div>
-        <div className="create_acc_btn" onClick={() => window.location.href = '/signin'}>
-          <Button
-            btnName='create account'
-            className='create_acc'
-          />
+        <div className="create_acc_btn">
+          <Link className='anchor' to='/signin'>
+            <Button
+              btnName='create account'
+              className='create_acc'
+            />
+          </Link>
+
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@ import React from 'react'
 import "../../../assets/styles/index.scss";
 import Form from '../../common/form/Form';
 import Button from '../../common/button/Button';
+import { Link } from 'react-router-dom';
 const Signin = () => {
     return (
         <>
@@ -18,11 +19,14 @@ const Signin = () => {
                     <Form type="email" label="Email Address" placeholder="Enter email address" d_none="d-none" />
                     <Form type="password" label="Password" placeholder="Enter password" d_none="d-none" />
                 </div>
-                <div className="create_acc_btn" onClick={() => window.location.href = '/user-acc'}>
-                    <Button
-                        btnName='login'
-                        className='login disable'
-                    />
+                <div className="create_acc_btn">
+                    <Link className='anchor' to='/user-acc'>
+                        <Button
+                            btnName='login'
+                            className='login disable'
+                        />
+                    </Link>
+
                 </div>
             </div>
         </>
